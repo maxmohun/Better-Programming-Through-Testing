@@ -23,6 +23,10 @@ sub is_leap_year {
 	$leap_p = $year % 100;
     }
 
+    if ( not $leap_p ) {
+	$leap_p = 1 if not $year % 400;
+    }
+
     return $leap_p;
 }
 
