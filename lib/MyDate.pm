@@ -19,6 +19,10 @@ sub is_leap_year {
 
     my $leap_p = not $year % 4;
 
+    if ( $leap_p ) {
+	$leap_p = $year % 100;
+    }
+
     return $leap_p;
 }
 
