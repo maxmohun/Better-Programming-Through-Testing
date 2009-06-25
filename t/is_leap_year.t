@@ -20,11 +20,8 @@ my %year =
 
 my $year;
 for $year ( keys %year ) {
-    if ( $year{$year} ) {
-	ok( MyDate->is_leap_year($year), "$year is a leap year" );
-    } else {
-	ok( ! MyDate->is_leap_year($year), "$year is not a leap year" );
-    }
+    is ( !!MyDate->is_leap_year($year), !!$year{$year},
+	 "Testing whether $year is a leap year" );
 }
 
 done_testing();
