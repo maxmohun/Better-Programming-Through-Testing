@@ -17,7 +17,7 @@ sub is_leap_year {
     my $class = shift;
     my $year  = shift;
 
-    my $leap_p = !$year % 4;
+    my $leap_p = not $year % 4;
 
     return $leap_p;
 }
