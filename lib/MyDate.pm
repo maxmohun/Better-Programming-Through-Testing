@@ -7,7 +7,7 @@ use warnings;
 
   my $is_leap_year = MyDate->is_leap_year($year);
 
-Calculates if $year is a leap year.
+Tests if $year is a leap year.
 
 Return true if it is, false if not.
 
@@ -28,6 +28,24 @@ sub is_leap_year {
     }
 
     return $leap_p;
+}
+
+=head3 day_of_week
+
+  my $dow = MyDate->day_of_week($year, $month, $day);
+
+Returns the named $dow for the $year, $month and $day.
+
+    print MyDate->day_of_week(2009, 12, 25); # Thursday.
+
+=cut
+
+sub day_of_week {
+    my $class = shift;
+    my ($year, $month, $day) = @_;
+
+    my $dow;
+    return $dow;
 }
 
 1;
